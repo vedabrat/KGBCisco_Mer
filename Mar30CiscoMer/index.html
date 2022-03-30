@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html>
 <title>CISCO-MERAKI_IMM_GES_Lead Engage</title>
-<style>
-</style>
-<header>
-</header>
-<body class="initial">
-</body>	<!--
+
+<body style="background-color:green" id="initial">
+<!--
 	Section 1 Begins
 -->
-----
-<div class="section1">
-<h4>
-	Protect and Connect Your Network Without Compromise
-</h4>
-<h4>
-	Secure access service edge (SASE) is an architecture that integrates networking security functions. Built on proven technologies like cloud, SD-WAN, and zero-trust security, the path to SASE offers immediate and long-term benefits, such as enhanced customer experience, agility, security, and productivity.
-</h4>
 
-<p>
-	With my SASE solution, I need to:
-</p>
-	<button>Enhance security</button>
-	<button>Streamline IT Management</button>
-	<button>Improve customer experiences</button>
+<div id="section1" style="color:white">
+<div class="header first">
+	<h4>
+		Protect and Connect Your Network Without Compromise
+	</h4>
+</div>
+<div class="body left first">
+	<h4>
+		Secure access service edge (SASE) is an architecture that integrates networking security functions. Built on proven technologies like cloud, SD-WAN, and zero-trust security, the path to SASE offers immediate and long-term benefits, such as enhanced customer experience, agility, security, and productivity.
+	</h4>
+</div>
+<div class="body center first">
+	<img src="./assets/illustration/servers.png">
+	<img src="./assets/illustration/analytics.png">
+	<img src="./assets/illustration/cloud.png">
+	<img src="./assets/illustration/dust.png">
+	<img src="./assets/illustration/email.png">
+	<img src="./assets/illustration/gear.png">
+	<img src="./assets/illustration/inspect.png">
+	<img src="./assets/illustration/puter.png">
+	<img src="./assets/illustration/secure-files.png">
+	<img src="./assets/illustration/wheel.png" >
+</div>
+<div class="body right first">
+	<img src="./assets/logo/cisco-meraki_KO.png" alt="">
+	POWERED BY:
+	<img src="./assets/logo/bizteklogo/bti_logo_KO_250.png" alt="">
+</div>
+<div class="footer first">
+	<p>
+		With my SASE solution, I need to:
+	</p>
+	<br>
+		<button onclick="nextSection('section1', 'section2')" > Enhance security</button>
+		<button>Streamline IT Management</button>
+		<button>Improve customer experiences</button>
+</div>
 </div>
 <!--
 Section 1 Ends
@@ -32,7 +52,7 @@ Section 1 Ends
 <!--
 Section 2 Begins
 -->
-<div class="section2">
+<div id="section2" style="color:white">
 <h4>
 	Gain Agility, Security, and Consistency with SASE
 </h4>
@@ -50,7 +70,7 @@ Section 2 Ends
 <!--
 Section 3 Begins
 -->
-<div class="section3">
+<div id="section3">
 <h4>
 	Increase Productivity for Your Business Users and IT Teams
 </h4>
@@ -97,6 +117,10 @@ Section 3 Ends
 <script>
 // user gateway
 //	click one of the three buttons
+	function nextSection(hide ,show){
+		document.getElementsbyID(hide).hidden = true;
+		document.getElementsbyID(show).hidden = false;
+		}
 //	Click one button
 //	Enter your information into a form.
 //	Click submit

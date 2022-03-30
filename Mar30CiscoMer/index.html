@@ -1,52 +1,100 @@
 <!DOCTYPE html>
 <html>
 <title>CISCO-MERAKI_IMM_GES_Lead Engage</title>
+<head>
 
-<body style="background-color:green" id="initial">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/roboto" >
+	<style>
+	.image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 120px;
+		height: 120px;
+		margin:-60px 0 0 -60px;
+		-webkit-animation:spin 4s linear infinite;
+		-moz-animation:spin 4s linear infinite;
+		animation:spin 8s linear infinite;
+	}
+	.image_rev {
+		position: absolute;
+		top: 60%;
+		left: 60%;
+		width: 60px;
+		height: 60px;
+		margin: -60px 0 0 -60px;
+		-webkit-animation:spin 10s linear infinite;
+		-moz-animation:spin 10s linear infinite;
+		animation:spin 9s linear infinite;
+	}
+	.imagewheel {
+		position: absolute;
+		top: 25%;
+		left: 10%;
+		width: 560px;
+		height: 560px;
+		margin:-60px 0 0 -60px;
+		-webkit-animation:spin 100s linear infinite;
+		-moz-animation:spin 100s linear infinite;
+		animation:spin 40s linear infinite;
+	}
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+	</style>
+</head>
+<body style="background-color: #70aa56" id="initial">
 <!--
 	Section 1 Begins
 -->
 
-<div id="section1" style="color:white">
-<div class="header first">
-	<h4 style="font-weight:300;font-family:Roboto;font-style:normal;text-decoration:none;text-transform:none;font-size:38px;color:rgba(255, 255, 255, 1)">
-		Protect and Connect Your Network Without Compromise
-	</h4>
-</div>
-<div class="body left first">
-	<h4 style="color:rgba(255, 255, 255, 1);font-style:normal;font-weight:400;letter-spacing:0.1px;text-decoration:none;text-transform:none;font-family:Roboto;font-size:18px">
-		Secure access service edge (SASE) is an architecture that integrates networking security functions. Built on proven technologies like cloud, SD-WAN, and zero-trust security, the path to SASE offers immediate and long-term benefits, such as enhanced customer experience, agility, security, and productivity.
-	</h4>
-</div>
-<div class="body center first">
-	<img src="./assets/illustration/servers.png">
-	<img src="./assets/illustration/analytics.png">
-	<img src="./assets/illustration/cloud.png">
-	<img z-axis=5 src="./assets/illustration/dust.png">
-	<img src="./assets/illustration/email.png">
-	<img src="./assets/illustration/gear.png">
-	<img src="./assets/illustration/inspect.png">
-	<img src="./assets/illustration/puter.png">
-	<img src="./assets/illustration/secure-files.png">
-	<img src="./assets/illustration/wheel.png" >
-</div>
-<div class="body right first">
-	<img src="./assets/logo/cisco-meraki_KO.png" >
-	<br>
-	<p style="font-family:Roboto;font-size:10px;letter-spacing:2.3px;font-style:normal;font-weight:500;color:rgba(255, 255, 255, 1)">
-		POWERED BY:
-	</p>
-	<img src="./assets/logo/bizteklogo/bti_logo_KO_250.png" >
-</div>
-<div class="footer first">
-	<p style="color:rgba(232, 249, 248, 1);font-style:normal;letter-spacing:0.1px;text-decoration:none;font-weight:700;text-transform:none;font-size:20px;font-family:Roboto">
-		With my SASE solution, I need to:
-	</p>
-	<br>
-		<button onclick="nextSection('section1', 'section2')" > Enhance security</button>
-		<button>Streamline IT Management</button>
-		<button>Improve customer experiences</button>
-</div>
+<div id="section1" class="container">
+	<div class="header first ">
+		<h4 style="font-weight:300;font-style:normal;text-decoration:none;text-transform:none;font-size:38px;color:rgba(255, 255, 255, 1)">
+			Protect and Connect Your Network Without Compromise
+		</h4>
+	</div>
+	<div class="container">
+		<div class="body left first col-3">
+			<h4 style="color:rgba(255, 255, 255, 1);font-style:normal;font-weight:400;letter-spacing:0.1px;text-decoration:none;text-transform:none;font-family:Roboto;font-size:18px">
+				Secure access service edge (SASE) is an architecture that integrates networking security functions. Built on proven technologies like cloud, SD-WAN, and zero-trust security, the path to SASE offers immediate and long-term benefits, such as enhanced customer experience, agility, security, and productivity.
+			</h4>
+		</div>
+		<div class="body center first col-6" >
+			<img src="./assets/illustration/servers.png">
+			<br>
+			<img src="./assets/illustration/cloud.png">
+			<img src="./assets/illustration/email.png">
+			<br>
+			<img src="./assets/illustration/inspect.png">
+			<img src="./assets/illustration/puter.png">
+			<img src="./assets/illustration/analytics.png">
+			<br>
+			<img src="./assets/illustration/dust.png">
+			<img class="image" src="./assets/illustration/gear.png">
+			<img class="image_rev" src="./assets/illustration/gear.png">
+			<img src="./assets/illustration/secure-files.png">
+			<img class="imagewheel" src="./assets/illustration/wheel.png" >
+		</div>
+		<div class="body right first">
+			<img src="./assets/logo/cisco-meraki_KO.png" >
+			<br>
+			<p style="font-family:Roboto;font-size:10px;letter-spacing:2.3px;font-style:normal;font-weight:500;color:rgba(255, 255, 255, 1)">
+				POWERED BY:
+			</p>
+			<img src="./assets/logo/bizteklogo/bti_logo_KO_250.png" >
+		</div>
+	</div>
+	<div class="footer first">
+		<p style="color:rgba(232, 249, 248, 1);font-style:normal;letter-spacing:0.1px;text-decoration:none;font-weight:700;text-transform:none;font-size:20px;font-family:Roboto">
+			With my SASE solution, I need to:
+		</p>
+		<br>
+			<button style="background-color: rgb(20,39,74)" onclick="nextSection('section1', 'section2')" > Enhance security</button>
+			<button style="background-color: rgb(20,39,74)">Streamline IT Management</button>
+			<button style="background-color: rgb(20,39,74)">Improve customer experiences</button>
+	</div>
 </div>
 <!--
 Section 1 Ends
@@ -68,22 +116,28 @@ Section 2 Begins
 			</h4>
 			<img src="./assets/illustration/scsa.png">
 		</div>
-		<h4 style="font-family:Roboto;letter-spacing:0.1px;color:rgba(255, 255, 255, 1);font-style:normal;font-weight:500;font-size:13px">
-			Meraki enables businesses to integrate networking and network security features and improve experiences anywhere employees work, with capabilities including enhanced security, streamlined management, sustained experience, and powerful productivity.
-		</h4>
-		<br>
-		<img src="./assets/logo/cisco-meraki_KO.png" >
-		<br>
-		POWERED BY:
-		<img src="./assets/logo/bizteklogo/bti_logo_KO_250.png" >
-
+		<div>
+			<div style="background-color: rgb(20,39,74)">
+				<h4 style="font-family:Roboto;letter-spacing:0.1px;color:rgba(255, 255, 255, 1);font-style:normal;font-weight:500;font-size:13px">
+					Meraki enables businesses to integrate networking and network security features and improve experiences anywhere employees work, with capabilities including enhanced security, streamlined management, sustained experience, and powerful productivity.
+				</h4>
+				<p>
+					Source: Explore Your SASE Side
+				</p>
+			</div>
+			<br>
+			<img src="./assets/logo/cisco-meraki_KO.png" >
+			<br>
+			POWERED BY:
+			<img src="./assets/logo/bizteklogo/bti_logo_KO_250.png" >
+		</div>
 	</div>
 	<div class="footer">
 		<h4 style="font-family:Roboto;font-style:normal;letter-spacing:0.1px;text-decoration:none;font-weight:700;text-transform:none;color:rgba(255, 255, 255, 1);font-size:21px">
 			Download the solution guide, “Explore Your SASE Side,” now.
 		</h4>
 		<br>
-		<button style="color:blue" type="button" name="button"> Click to continue</button>
+		<button style="background-color: rgb(20,39,74)" type="button" name="button"> Click to continue</button>
 	</div>
 </div>
 <!--
@@ -142,7 +196,7 @@ Section 3 Begins
 	<br>
 	<input type="text" name="" value="" placeholder="Company Size">
 
-	<button >Download Now</button>
+	<button style="background-color: rgb(20,39,74)">Download Now</button>
 </form>
 </div>
 

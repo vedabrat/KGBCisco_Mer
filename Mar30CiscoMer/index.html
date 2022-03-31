@@ -23,18 +23,6 @@
 	    transform: scale(1, 1);
 	  }
 	}
-	.image {
-		position: absolute;
-		top: 57%;
-		left: 16%;
-		width: 61px;
-		height: 61px;
-		margin:-40px 0 0 -60px;
-		-webkit-animation:spin 4s linear infinite;
-		-moz-animation:spin 4s linear infinite;
-		animation:spin 8s linear infinite;
-
-	}
 	.imagecloud {
 		position: absolute;
 		margin: -70px 0 0 40px;
@@ -86,9 +74,125 @@
 		top: 15%;
 		left: 10%;
 		margin:-60px 0 0 -60px;
-		-webkit-animation:spin 100s linear infinite;
-		-moz-animation:spin 100s linear infinite;
-		animation:spin 40s linear infinite;
+	}
+	.image {
+		position: absolute;
+		top: 58%;
+		left: 16%;
+		width: 61px;
+		height: 61px;
+		margin:-40px 0 0 -60px;
+		-webkit-animation:spin 4s linear infinite;
+		-moz-animation:spin 4s linear infinite;
+		animation:spin 8s linear infinite;
+
+	}
+	.up-down{
+	  animation: up-down linear 4s;
+	  animation-iteration-count: infinite;
+	  transform-origin: 50% 50%;
+	  -webkit-animation: up-down linear 4s;
+	  -webkit-animation-iteration-count: infinite;
+	  -webkit-transform-origin: 50% 50%;
+	  -moz-animation: up-down linear 4s;
+	  -moz-animation-iteration-count: infinite;
+	  -moz-transform-origin: 50% 50%;
+	  -o-animation: up-down linear 4s;
+	  -o-animation-iteration-count: infinite;
+	  -o-transform-origin: 50% 50%;
+	  -ms-animation: up-down linear 4s;
+	  -ms-animation-iteration-count: infinite;
+	  -ms-transform-origin: 50% 50%;
+	}
+
+	@keyframes up-down{
+	  0% {
+	    transform:  translate(1px,20px)  ;
+	  }
+	  24% {
+	    transform:  translate(1px,30px)  ;
+	  }
+	  50% {
+	    transform:  translate(1px,12px)  ;
+	  }
+	  74% {
+	    transform:  translate(1px,22px)  ;
+	  }
+	  100% {
+	    transform:  translate(1px,22px)  ;
+	  }
+	}
+
+	@-moz-keyframes up-down{
+	  0% {
+	    -moz-transform:  translate(1px,20px)  ;
+	  }
+	  24% {
+	    -moz-transform:  translate(1px,30px)  ;
+	  }
+	  50% {
+	    -moz-transform:  translate(1px,12px)  ;
+	  }
+	  74% {
+	    -moz-transform:  translate(1px,22px)  ;
+	  }
+	  100% {
+	    -moz-transform:  translate(1px,22px)  ;
+	  }
+	}
+
+	@-webkit-keyframes up-down {
+	  0% {
+	    -webkit-transform:  translate(1px,20px)  ;
+	  }
+	  24% {
+	    -webkit-transform:  translate(1px,30px)  ;
+	  }
+	  50% {
+	    -webkit-transform:  translate(1px,12px)  ;
+	  }
+	  74% {
+	    -webkit-transform:  translate(1px,22px)  ;
+	  }
+	  100% {
+	    -webkit-transform:  translate(1px,22px)  ;
+	  }
+	}
+
+	@-o-keyframes up-down {
+	  0% {
+	    -o-transform:  translate(1px,20px)  ;
+	  }
+	  24% {
+	    -o-transform:  translate(1px,30px)  ;
+	  }
+	  50% {
+	    -o-transform:  translate(1px,12px)  ;
+	  }
+	  74% {
+	    -o-transform:  translate(1px,22px)  ;
+	  }
+	  100% {
+	    -o-transform:  translate(1px,22px)  ;
+	  }
+	}
+
+	@-ms-keyframes up-down {
+	  0% {
+	    -ms-transform:  translate(1px,20px)  ;
+	  }
+	  24% {
+	    -ms-transform:  translate(1px,30px)  ;
+	  }
+	  50% {
+	    -ms-transform:  translate(1px,12px)  ;
+	  }
+	  74% {
+	    -ms-transform:  translate(1px,22px)  ;
+	  }
+	  100% {
+	    -ms-transform:  translate(1px,22px)  ;
+	  }
 	}
 	.imagegradhat {
 		position: absolute;
@@ -169,7 +273,7 @@
 				<img class="image_rev zoom-in-zoom-out" src="./assets/illustration/gear.png">
 				<img class="image_secfiles zoom-in-zoom-out" width="88px" height="72px" src="./assets/illustration/secure-files.png">
 				<img z-index=1 class="imagewheel" src="./assets/illustration/wheel.png" >
-				<img class="imagedust" src="./assets/illustration/dust.png">
+				<img class="imagedust up-down" src="./assets/illustration/dust.png">
 			</div>
 			<br>
 			<div class="row" style="color:white;">
